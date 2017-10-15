@@ -1,0 +1,66 @@
+//Liður 1
+1. Html event hanlers.
+2. Traditional DOM EVENT HANDLERS.
+3. DOM level 2 eventlisteners. 
+
+document.getElementById("dæmi").onkeydown = function() {myFunction()};
+
+function myFunction() {
+    document.getElementById("dæmi").style.backgroundColor = "yellow";
+}
+
+Elementið verður gult um leið og það skynjar lyklaborðs ásláttur.
+
+//Liður 2
+Þú getur callað í annað function frá functioninu sem þú ert í.
+
+function identifacation(name) {
+  alert('you are : ' + name);
+}
+function processUserInput(callback) {
+  var name = prompt('What is your name.');
+  callback(name);
+}
+processUserInput(identifacation);
+
+//Liður 3
+Setur eventa í stackinn og framkvæmir þá. Hjálpar með stærri gögn og vinnslur.
+Notar threada.
+
+//Liður 4
+
+function checkUsername(e) {
+    var target = e.target;
+}
+var el = document.getElementById('username');
+el.addEventListener('blur', checkUsername, false);
+
+//Liður 5
+
+Það er "useCapture" parturinn af functioninu. 
+
+True þýður að eventinn fer strax afstað.
+False þýðir að eventinn fer af stað í bubbling phase-inu (Í endan).
+
+
+fann gott dæmi á netinu.
+
+ 					 A
+ -----------------|--|-----------------
+ | Parent         |  |                |
+ |   -------------|--|-----------     |
+ |   |Children    V  |          |     |
+ |   ----------------------------     |
+ |                                    |
+ --------------------------------------
+
+//Liður 6
+
+stopPropagation() Hunsar alla aðrahlustara þegar það fer í gang.
+
+preventDefault() kemur í veg fyrir að notandinn geri breytingu á eitthverju.
+T.D kemur í veg fyrir að hann haki í checkbox
+
+//Liður 7 
+
+Svörin eru í html-inu.
